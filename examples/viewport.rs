@@ -1,6 +1,5 @@
 use bevy::{prelude::*, render::camera::Viewport};
 use bevy_pancam::{PanCam, PanCamPlugin};
-use rand::prelude::random;
 
 fn main() {
     App::new()

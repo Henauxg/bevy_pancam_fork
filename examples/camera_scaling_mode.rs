@@ -11,7 +11,9 @@ fn main() {
 
 fn setup(mut commands: Commands) {
     let mut cam = Camera2dBundle::default();
-    cam.projection.scaling_mode = ScalingMode::FixedVertical(10.0);
+    cam.projection.scaling_mode = ScalingMode::FixedVertical {
+        viewport_height: 10.0,
+    };
 
     commands.spawn((
         cam,
