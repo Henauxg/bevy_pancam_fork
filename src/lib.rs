@@ -137,7 +137,7 @@ fn check_egui_wants_focus(
     wants_focus.set_if_neq(EguiWantsFocus(new_wants_focus));
 }
 
-fn do_camera_zoom(
+pub fn do_camera_zoom(
     mut query: Query<(
         &PanCam,
         &Camera,
@@ -268,7 +268,7 @@ fn clamp_to_safe_zone(pos: Vec2, aabb: Aabb2d, bounded_area_size: Vec2) -> Vec2 
     pos.clamp(aabb.min, aabb.max)
 }
 
-fn do_camera_movement(
+pub fn do_camera_movement(
     primary_window: Query<&Window, With<PrimaryWindow>>,
     mouse_buttons: Res<ButtonInput<MouseButton>>,
     keyboard_buttons: Res<ButtonInput<KeyCode>>,
